@@ -1,0 +1,12 @@
+defaultNamespace: recovery-test-app
+
+labels:
+  app: recovery-test-app
+
+dependsOn:
+  - selector:
+      matchLabels:
+        app: longhorn
+
+helm:
+  chart: ./chart

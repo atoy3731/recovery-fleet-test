@@ -1,0 +1,10 @@
+defaultNamespace: longhorn-system
+
+labels:
+  app: longhorn
+
+helm:
+  repo: https://charts.longhorn.io
+  chart: longhorn
+  version: 1.7.2
+  releaseName: longhorn

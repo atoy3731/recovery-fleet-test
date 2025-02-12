@@ -1,0 +1,16 @@
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: recovery-app
+  namespace: fleet-default
+spec:
+  repo: https://github.com/atoy3731/recovery-fleet-test.git
+  branch: main
+  targets:
+  - name: downstream
+    clusterSelector:
+      matchLabels:
+        cluster: downstream
+  paths:
+  - ./longhorn
+  - ./recovery-app
